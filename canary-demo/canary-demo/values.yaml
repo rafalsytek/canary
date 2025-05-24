@@ -15,17 +15,17 @@ ingress:
   host: "canary-demo.local"
 
 canary:
-  enabled: true
+  enabled: true # changing to false will only run the main
   replicaCount: 1
   image:
-    tag: "v2"
+    tag: "v3"
 
 config:
   main:
     appColor: "white"
     welcomeMessage: "Welcome to Upcommerce.com!"
   canary:
-    appColor: "green"
+    appColor: "yellow"
     welcomeMessage: "Welcome to Upcommerce.com Canary!"
 
 serviceMonitor:

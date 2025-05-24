@@ -8,7 +8,7 @@ data:
   APP_COLOR: {{ .Values.config.main.appColor }}
   WELCOME_MESSAGE: {{ .Values.config.main.welcomeMessage }}
 ---
-{{- if .Values.canary.enabled }}
+{{- if .Values.canary.enabled }} # if canary is enabled, use this
 apiVersion: v1
 kind: ConfigMap
 metadata:
